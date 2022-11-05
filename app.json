@@ -1,33 +1,61 @@
 {
-  "expo": {
-    "name": "pally-3",
-    "slug": "pally-3",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+    "expo": {
+        "name": "Pally",
+        "slug": "Pally",
+        "version": "1.0.4",
+        "owner": "pain-medication",
+        "orientation": "portrait",
+        "icon": "./assets/icon.png",
+        "userInterfaceStyle": "light",
+        "splash": {
+            "image": "./assets/splash.png",
+            "resizeMode": "contain",
+            "backgroundColor": "#ffffff"
+        },
+        "updates": {
+            "fallbackToCacheTimeout": 0
+        },
+        "assetBundlePatterns": ["**/*"],
+        "ios": {
+            "supportsTablet": true,
+            "infoPlist": {
+                "LSApplicationQueriesSchemes": [
+                    "message",
+                    "readdle-spark",
+                    "airmail",
+                    "ms-outlook",
+                    "googlegmail",
+                    "inbox-gmail",
+                    "ymail",
+                    "superhuman",
+                    "yandexmail"
+                ]
+            },
+            "config": {
+                "googleMobileAdsAppId": "ca-app-pub-5014596384292095~9248636887"
+            },
+            "bundleIdentifier": "com.pallymedicine.pallymedicine"
+        },
+        "android": {
+            "adaptiveIcon": {
+                "foregroundImage": "./assets/adaptive-icon.png",
+                "backgroundColor": "#FFFFFF"
+            },
+            "config": {
+                "googleMobileAdsAppId": "ca-app-pub-5014596384292095~2559546396"
+            }
+        },
+        "web": {
+            "favicon": "./assets/favicon.png"
+        },
+        "extra": {
+            "eas": {
+                "projectId": "d3141ed6-68c6-4216-9645-55475e7610ed"
+            }
+        }
     },
-    "updates": {
-      "fallbackToCacheTimeout": 0
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "ios": {
-      "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
+    "react-native-google-mobile-ads": {
+        "android_app_id": "ca-app-pub-5014596384292095~2559546396",
+        "ios_app_id": "ca-app-pub-5014596384292095~9248636887"
     }
-  }
 }
