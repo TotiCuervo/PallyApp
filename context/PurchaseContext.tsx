@@ -21,7 +21,6 @@ export const PurchaseProvider = ({ children }: any) => {
             Purchases.setDebugLogsEnabled(true);
             Purchases.configure({ apiKey: 'appl_uFNbEBjFGYuQqqFsABbmmkliQNe' });
             Purchases.getCustomerInfo().then((customerInfo) => {
-                console.log(customerInfo);
                 setPurchases(customerInfo.allPurchasedProductIdentifiers);
             });
         };
