@@ -14,18 +14,20 @@ export default function AdBanner() {
     const testAndroidUnitId = 'ca-app-pub-3940256099942544/6300978111';
 
     useEffect(() => {
-        if (isProduction) {
-            setUnitId(Platform.OS === 'ios' ? iosUnitId : androidUnitId);
-        } else {
-            setUnitId(Platform.OS === 'ios' ? testIosUnitId : testAndroidUnitId);
-        }
+        setUnitId(Platform.OS === 'ios' ? iosUnitId : androidUnitId);
+
+        // if (isProduction) {
+        //     setUnitId(Platform.OS === 'ios' ? iosUnitId : androidUnitId);
+        // } else {
+        //     setUnitId(Platform.OS === 'ios' ? testIosUnitId : testAndroidUnitId);
+        // }
     }, []);
     return (
         <>
             {showAds && unitId !== '' ? (
                 <View style={{ alignItems: 'center', width: '90%', alignSelf: 'center' }}>
                     <BannerAd
-                        unitId={'ca-app-pub-3940256099942544/2934735716'}
+                        unitId={unitId}
                         size={BannerAdSize.BANNER}
                         requestOptions={{
                             requestNonPersonalizedAdsOnly: true

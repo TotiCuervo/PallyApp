@@ -2,7 +2,7 @@
     "expo": {
         "name": "Pally",
         "slug": "Pally",
-        "version": "1.0.6",
+        "version": "1.0.7",
         "owner": "pain-medication",
         "orientation": "portrait",
         "icon": "./assets/icon.png",
